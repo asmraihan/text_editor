@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Editor</title>
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontawsome kit -->
+    <script src="https://kit.fontawesome.com/61bf647dc1.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="bg-emerald-500 ">
+
+  <section class="flex flex-col justify-center items-center mt-28 ">
+    <div class="row bg-white w-1/2 mx-auto rounded-sm shadow-lg">
+        <div class="col flex justify-between items-center px-4 py-2">
+            <div class="first box flex gap-8">
+                <input id="font-size" class="outline-0 w-1/3" type="number" value="16" min="1" max="100" onchange="fontSize(this)">
+                <input type="color" onchange="textColor(this)">
+            </div>
+            <div class="second box flex gap-8">
+                <button type="button" onclick="fontBold(this)">
+                    <i class="fa-solid fa-bold"></i>
+                </button>
+                <button type="button" onclick="fontItalic(this)">
+                    <i class="fa-solid fa-italic"></i>
+                </button>
+                <button type="button" onclick="fontUnderLine(this)">
+                    <i class="fa-solid fa-underline"></i>
+                </button>
+            </div>
+            <div class="third box flex gap-8">
+                <button type="button" onclick="alignLeft(this)">
+                    <i class="fa-solid fa-align-left"></i>
+                </button>
+                <button type="button" onclick="alignCenter(this)">
+                    <i class="fa-solid fa-align-center"></i>
+                </button>
+                <button type="button" onclick="alignRight(this)">
+                    <i class="fa-solid fa-align-right"></i>
+                </button>
+            </div>
+            <div class="fourth box flex gap-8">
+                <button type="button" onclick="caseChange(this)">aA</button>
+                <button type="button" onclick="eraseAll()">
+                    <i class="fa-solid fa-text-slash"></i>
+                </button>
+              
+            </div>
+        </div>
+    </div>
+    
+    <br>
+
+</section>
+<div class="bg-white w-1/2  mx-auto text-center rounded-sm shadow-lg">
+    <div class="">
+        <textarea class="outline-0 w-full h-96 rounded-sm p-8" id="textarea1" placeholder="Your text here "></textarea>
+    </div>
+</div>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
